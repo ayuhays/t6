@@ -10,17 +10,6 @@ def main():
 def run():
     app.run(host="0.0.0.0", port=8080)
 
-def keep_alive():
-    server = Thread(target=run)
-    server.start()
-import os
-import sys
-import json
-import time
-import requests
-import websocket
-from keep_alive import keep_alive
-
 status = "online" #online/dnd/idle
 
 GUILD_ID = os.getenv("GUILD_ID")
